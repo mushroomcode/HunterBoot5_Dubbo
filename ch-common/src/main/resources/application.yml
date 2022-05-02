@@ -1,0 +1,24 @@
+server:
+  port: 10022
+  ssl:
+    key-store: classpath:hunterkeys_7.jks
+    key-store-password: 123456
+    enabled: true
+    key-store-type: JKS
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/hunter?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+dubbo:
+  application:
+    name: cars-service-provider
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880

@@ -1,0 +1,19 @@
+server:
+  port: 20001
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/hunter?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+dubbo:
+  application:
+    name: ch-provider-calfrel
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  protocol:
+    port: 20880
+    name: dubbo
+  monitor:
+    protocol: registry

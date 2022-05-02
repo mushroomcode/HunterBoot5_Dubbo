@@ -1,0 +1,5 @@
+# Project exclude paths
+/ch-carrelhistory/target/
+/ch-common/target/
+/ch-consumer-whichrel/target/
+/ch-provider-calfrel/target/
